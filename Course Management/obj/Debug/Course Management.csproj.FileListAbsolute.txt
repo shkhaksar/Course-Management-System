@@ -1,0 +1,1 @@
+C:\dev\C# Projects\Course Management\Course Management\bin\Debug\Course Management.exe.config
