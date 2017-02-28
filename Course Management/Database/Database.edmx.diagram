@@ -7,7 +7,7 @@
       <Diagram DiagramId="acd908cfc45143e0b4ba7846970e8f8e" Name="Diagram1" >
         <EntityTypeShape EntityType="Database.Course" Width="1.5" PointX="0.75" PointY="1.25" />
         <EntityTypeShape EntityType="Database.Teacher" Width="1.5" PointX="3" PointY="1.25" />
-        <EntityTypeShape EntityType="Database.Student" Width="1.5" PointX="6.75" PointY="2.125" />
+        <EntityTypeShape EntityType="Database.Student" Width="1.5" PointX="4.875" PointY="2.625" />
         <AssociationConnector Association="Database.TeacherCourse" />
         <AssociationConnector Association="Database.StudentCourse" />
       </Diagram>

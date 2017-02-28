@@ -22,13 +22,14 @@ namespace Course_Management.Database
     
         public int Id { get; set; }
         public string name { get; set; }
-        public string capacity { get; set; }
-        public string exam_date { get; set; }
-        public string exam_time { get; set; }
+        public int capacity { get; set; }
+        public System.DateTime exam_date_time { get; set; }
         public string time1 { get; set; }
         public string time2 { get; set; }
         public int TeacherId { get; set; }
         public int CareerId { get; set; }
+        public string week_day_time1 { get; set; }
+        public string week_day_time2 { get; set; }
     
         public virtual Teacher Teacher { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
