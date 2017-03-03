@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/28/2017 22:10:51
+-- Date Created: 03/03/2017 18:18:35
 -- Generated from EDMX file: C:\dev\C# Projects\Course-Management-System\Course Management\Database\Database.edmx
 -- --------------------------------------------------
 
@@ -52,14 +52,13 @@ GO
 CREATE TABLE [dbo].[Courses] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [name] nvarchar(max)  NOT NULL,
-    [capacity] int  NOT NULL,
-    [exam_date_time] datetime  NOT NULL,
-    [time1] nvarchar(max)  NOT NULL,
-    [time2] nvarchar(max)  NOT NULL,
+    [capacity] tinyint  NOT NULL,
+    [exam_date] datetime  NOT NULL,
+    [time1] tinyint  NOT NULL,
+    [time2] tinyint  NOT NULL,
     [TeacherId] int  NOT NULL,
     [CareerId] int  NOT NULL,
-    [week_day_time1] nvarchar(max)  NOT NULL,
-    [week_day_time2] nvarchar(max)  NOT NULL
+    [exam_time] tinyint  NOT NULL
 );
 GO
 

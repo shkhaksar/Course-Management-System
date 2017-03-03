@@ -29,14 +29,13 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="capacity" Type="int" Nullable="false" />
-    <Property Name="exam_date_time" Type="datetime" Nullable="false" />
-    <Property Name="time1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="time2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="capacity" Type="tinyint" Nullable="false" />
+    <Property Name="exam_date" Type="datetime" Nullable="false" />
+    <Property Name="time1" Type="tinyint" Nullable="false" />
+    <Property Name="time2" Type="tinyint" Nullable="false" />
     <Property Name="TeacherId" Type="int" Nullable="false" />
     <Property Name="CareerId" Type="int" Nullable="false" />
-    <Property Name="week_day_time1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="week_day_time2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="exam_time" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="Teachers">
     <Key>
@@ -119,16 +118,15 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
-          <Property Name="capacity" Type="Int32" Nullable="false" />
-          <Property Name="exam_date_time" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
-          <Property Name="time1" Type="String" Nullable="false" />
-          <Property Name="time2" Type="String" Nullable="false" />
+          <Property Name="capacity" Type="Byte" Nullable="false" />
+          <Property Name="exam_date" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
+          <Property Name="time1" Type="Byte" Nullable="false" />
+          <Property Name="time2" Type="Byte" Nullable="false" />
           <NavigationProperty Name="Teacher" Relationship="Database.TeacherCourse" FromRole="Course" ToRole="Teacher" />
           <Property Name="TeacherId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Students" Relationship="Database.StudentCourse" FromRole="Course" ToRole="Student" />
           <Property Name="CareerId" Type="Int32" Nullable="false" />
-          <Property Name="week_day_time1" Type="String" Nullable="false" />
-          <Property Name="week_day_time2" Type="String" Nullable="false" />
+          <Property Name="exam_time" Type="Byte" Nullable="false" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -174,13 +172,12 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="capacity" ColumnName="capacity" />
-          <ScalarProperty Name="exam_date_time" ColumnName="exam_date_time" />
+          <ScalarProperty Name="exam_date" ColumnName="exam_date" />
           <ScalarProperty Name="time1" ColumnName="time1" />
           <ScalarProperty Name="time2" ColumnName="time2" />
           <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
           <ScalarProperty Name="CareerId" ColumnName="CareerId" />
-          <ScalarProperty Name="week_day_time1" ColumnName="week_day_time1" />
-          <ScalarProperty Name="week_day_time2" ColumnName="week_day_time2" />
+          <ScalarProperty Name="exam_time" ColumnName="exam_time" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

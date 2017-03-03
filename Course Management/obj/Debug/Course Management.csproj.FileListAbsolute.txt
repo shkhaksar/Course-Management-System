@@ -12,3 +12,6 @@ C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course M
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.exe
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.pdb
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromMain.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormStudents.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormTeachers.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromManagement.resources

@@ -19,16 +19,15 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" />
-    <Property Name="capacity" Type="Int32" Nullable="false" />
-    <Property Name="exam_date_time" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
-    <Property Name="time1" Type="String" Nullable="false" />
-    <Property Name="time2" Type="String" Nullable="false" />
+    <Property Name="capacity" Type="Byte" Nullable="false" />
+    <Property Name="exam_date" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
+    <Property Name="time1" Type="Byte" Nullable="false" />
+    <Property Name="time2" Type="Byte" Nullable="false" />
     <NavigationProperty Name="Teacher" Relationship="Database.TeacherCourse" FromRole="Course" ToRole="Teacher" />
     <Property Name="TeacherId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Students" Relationship="Database.StudentCourse" FromRole="Course" ToRole="Student" />
     <Property Name="CareerId" Type="Int32" Nullable="false" />
-    <Property Name="week_day_time1" Type="String" Nullable="false" />
-    <Property Name="week_day_time2" Type="String" Nullable="false" />
+    <Property Name="exam_time" Type="Byte" Nullable="false" />
   </EntityType>
   <EntityType Name="Teacher">
     <Key>
