@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Database" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DatabaseContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Courses" EntityType="Database.Course" />
+    <EntitySet Name="Teachers" EntityType="Database.Teacher" />
+    <EntitySet Name="Students" EntityType="Database.Student" />
+    <AssociationSet Name="TeacherCourse" Association="Database.TeacherCourse">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Course" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="StudentCourse" Association="Database.StudentCourse">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Course" EntitySet="Courses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <Property Name="capacity" Type="Int32" Nullable="false" />
+    <Property Name="exam_date_time" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
+    <Property Name="time1" Type="String" Nullable="false" />
+    <Property Name="time2" Type="String" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="Database.TeacherCourse" FromRole="Course" ToRole="Teacher" />
+    <Property Name="TeacherId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="Database.StudentCourse" FromRole="Course" ToRole="Student" />
+    <Property Name="CareerId" Type="Int32" Nullable="false" />
+    <Property Name="week_day_time1" Type="String" Nullable="false" />
+    <Property Name="week_day_time2" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Courses" Relationship="Database.TeacherCourse" FromRole="Teacher" ToRole="Course" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Courses" Relationship="Database.StudentCourse" FromRole="Student" ToRole="Course" />
+  </EntityType>
+  <Association Name="TeacherCourse">
+    <End Type="Database.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="Database.Course" Role="Course" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Course">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StudentCourse">
+    <End Type="Database.Student" Role="Student" Multiplicity="*" />
+    <End Type="Database.Course" Role="Course" Multiplicity="*" />
+  </Association>
+</Schema>

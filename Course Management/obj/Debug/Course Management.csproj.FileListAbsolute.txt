@@ -11,3 +11,4 @@ C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_M
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.csproj.GenerateResource.Cache
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.exe
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.pdb
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromMain.resources
