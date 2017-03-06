@@ -24,13 +24,14 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="capacity" Type="tinyint" Nullable="false" />
+    <Property Name="capacity" Type="smallint" Nullable="false" />
     <Property Name="exam_date" Type="datetime" Nullable="false" />
-    <Property Name="time1" Type="tinyint" Nullable="false" />
-    <Property Name="time2" Type="tinyint" Nullable="false" />
+    <Property Name="time1" Type="smallint" Nullable="false" />
+    <Property Name="time2" Type="smallint" Nullable="false" />
     <Property Name="TeacherId" Type="int" Nullable="false" />
     <Property Name="CareerId" Type="int" Nullable="false" />
-    <Property Name="exam_time" Type="tinyint" Nullable="false" />
+    <Property Name="exam_time" Type="datetime" Nullable="false" />
+    <Property Name="code" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Teachers">
     <Key>
@@ -38,6 +39,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="code" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="Students">
     <Key>
@@ -45,6 +47,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="code" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="StudentCourse">
     <Key>

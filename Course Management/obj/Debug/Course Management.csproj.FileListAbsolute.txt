@@ -1,17 +1,22 @@
 C:\dev\C# Projects\Course Management\Course Management\bin\Debug\Course Management.exe.config
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Froms.Management.FormNewCourse.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Froms.Management.FormNewStudent.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Froms.Management.FormNewTeacher.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormStudents.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormTeachers.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromMain.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromManagement.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Properties.Resources.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.csproj.GenerateResource.Cache
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\Course Management.exe.config
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.csprojResolveAssemblyReference.cache
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\Course Management.exe
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\Course Management.pdb
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\EntityFramework.dll
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\EntityFramework.SqlServer.dll
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\EntityFramework.xml
 C:\dev\C# Projects\Course-Management-System\Course Management\bin\Debug\EntityFramework.SqlServer.xml
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.csprojResolveAssemblyReference.cache
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Properties.Resources.resources
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.csproj.GenerateResource.Cache
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.exe
 C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course Management.pdb
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromMain.resources
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormStudents.resources
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FormTeachers.resources
-C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.FromManagement.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Froms.Students.FormTakeCourse.resources
+C:\dev\C# Projects\Course-Management-System\Course Management\obj\Debug\Course_Management.Froms.Management.FormShowStudentCourses.resources

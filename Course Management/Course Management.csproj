@@ -46,6 +46,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="course_managementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>course_managementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="course_managementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>course_managementDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Database\Course.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -75,6 +91,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Froms\Management\FormNewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Management\FormNewCourse.Designer.cs">
+      <DependentUpon>FormNewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Management\FormNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Management\FormNewStudent.Designer.cs">
+      <DependentUpon>FormNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Management\FormNewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Management\FormNewTeacher.Designer.cs">
+      <DependentUpon>FormNewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Management\FormShowStudentCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Management\FormShowStudentCourses.Designer.cs">
+      <DependentUpon>FormShowStudentCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Management\FormTakeCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Management\FormTakeCourseStudent.Designer.cs">
+      <DependentUpon>FormTakeCourseStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Students\FormTakeCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Students\FormTakeCourse.Designer.cs">
+      <DependentUpon>FormTakeCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\Teachers\FormTeachers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +139,11 @@
     <Compile Include="Froms\Students\FormStudents.Designer.cs">
       <DependentUpon>FormStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Froms\Management\FromManagement.cs">
+    <Compile Include="Froms\Management\FormManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Froms\Management\FromManagement.Designer.cs">
-      <DependentUpon>FromManagement.cs</DependentUpon>
+    <Compile Include="Froms\Management\FormManagement.Designer.cs">
+      <DependentUpon>FormManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\Main\FromMain.cs">
       <SubType>Form</SubType>
@@ -107,8 +159,23 @@
     <Compile Include="Database\Teacher.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Froms\Management\FormNewCourse.resx">
+      <DependentUpon>FormNewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Management\FormNewStudent.resx">
+      <DependentUpon>FormNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Management\FormNewTeacher.resx">
+      <DependentUpon>FormNewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Management\FormShowStudentCourses.resx">
+      <DependentUpon>FormShowStudentCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\Students\FormStudents.resx">
       <DependentUpon>FormStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Students\FormTakeCourse.resx">
+      <DependentUpon>FormTakeCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\Teachers\FormTeachers.resx">
       <DependentUpon>FormTeachers.cs</DependentUpon>
@@ -116,8 +183,8 @@
     <EmbeddedResource Include="Froms\Main\FromMain.resx">
       <DependentUpon>FromMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Froms\Management\FromManagement.resx">
-      <DependentUpon>FromManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Froms\Management\FormManagement.resx">
+      <DependentUpon>FormManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +200,39 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Database.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CourseDataSet.xsc">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CourseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CourseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CourseDataSet.xss">
+      <DependentUpon>CourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="course_managementDataSet.xsc">
+      <DependentUpon>course_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="course_managementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>course_managementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="course_managementDataSet.xss">
+      <DependentUpon>course_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="course_managementDataSet1.xsc">
+      <DependentUpon>course_managementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="course_managementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>course_managementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="course_managementDataSet1.xss">
+      <DependentUpon>course_managementDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Database\Database.edmx.diagram">
       <DependentUpon>Database.edmx</DependentUpon>
     </None>
@@ -165,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

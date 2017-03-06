@@ -19,15 +19,16 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" />
-    <Property Name="capacity" Type="Byte" Nullable="false" />
+    <Property Name="capacity" Type="Int16" Nullable="false" />
     <Property Name="exam_date" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
-    <Property Name="time1" Type="Byte" Nullable="false" />
-    <Property Name="time2" Type="Byte" Nullable="false" />
+    <Property Name="time1" Type="Int16" Nullable="false" />
+    <Property Name="time2" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Teacher" Relationship="Database.TeacherCourse" FromRole="Course" ToRole="Teacher" />
     <Property Name="TeacherId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Students" Relationship="Database.StudentCourse" FromRole="Course" ToRole="Student" />
     <Property Name="CareerId" Type="Int32" Nullable="false" />
-    <Property Name="exam_time" Type="Byte" Nullable="false" />
+    <Property Name="exam_time" Type="DateTime" Nullable="false" />
+    <Property Name="code" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Teacher">
     <Key>
@@ -36,6 +37,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" />
     <NavigationProperty Name="Courses" Relationship="Database.TeacherCourse" FromRole="Teacher" ToRole="Course" />
+    <Property Name="code" Type="Int64" Nullable="false" />
   </EntityType>
   <EntityType Name="Student">
     <Key>
@@ -44,6 +46,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" />
     <NavigationProperty Name="Courses" Relationship="Database.StudentCourse" FromRole="Student" ToRole="Course" />
+    <Property Name="code" Type="Int64" Nullable="false" />
   </EntityType>
   <Association Name="TeacherCourse">
     <End Type="Database.Teacher" Role="Teacher" Multiplicity="1" />

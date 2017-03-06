@@ -105,6 +105,7 @@
             this.Controls.Add(this.btn_teacher);
             this.Controls.Add(this.btn_management);
             this.Name = "FromMain";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "سامانه انتخاب واحد";
             this.ResumeLayout(false);
             this.PerformLayout();

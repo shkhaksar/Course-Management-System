@@ -29,13 +29,14 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="capacity" Type="tinyint" Nullable="false" />
+    <Property Name="capacity" Type="smallint" Nullable="false" />
     <Property Name="exam_date" Type="datetime" Nullable="false" />
-    <Property Name="time1" Type="tinyint" Nullable="false" />
-    <Property Name="time2" Type="tinyint" Nullable="false" />
+    <Property Name="time1" Type="smallint" Nullable="false" />
+    <Property Name="time2" Type="smallint" Nullable="false" />
     <Property Name="TeacherId" Type="int" Nullable="false" />
     <Property Name="CareerId" Type="int" Nullable="false" />
-    <Property Name="exam_time" Type="tinyint" Nullable="false" />
+    <Property Name="exam_time" Type="datetime" Nullable="false" />
+    <Property Name="code" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Teachers">
     <Key>
@@ -43,6 +44,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="code" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="Students">
     <Key>
@@ -50,6 +52,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="code" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="StudentCourse">
     <Key>
@@ -118,15 +121,16 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
-          <Property Name="capacity" Type="Byte" Nullable="false" />
+          <Property Name="capacity" Type="Int16" Nullable="false" />
           <Property Name="exam_date" Type="DateTime" Nullable="false" ConcurrencyMode="None" annotation:StoreGeneratedPattern="None" />
-          <Property Name="time1" Type="Byte" Nullable="false" />
-          <Property Name="time2" Type="Byte" Nullable="false" />
+          <Property Name="time1" Type="Int16" Nullable="false" />
+          <Property Name="time2" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Teacher" Relationship="Database.TeacherCourse" FromRole="Course" ToRole="Teacher" />
           <Property Name="TeacherId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Students" Relationship="Database.StudentCourse" FromRole="Course" ToRole="Student" />
           <Property Name="CareerId" Type="Int32" Nullable="false" />
-          <Property Name="exam_time" Type="Byte" Nullable="false" />
+          <Property Name="exam_time" Type="DateTime" Nullable="false" />
+          <Property Name="code" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -135,6 +139,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
           <NavigationProperty Name="Courses" Relationship="Database.TeacherCourse" FromRole="Teacher" ToRole="Course" />
+          <Property Name="code" Type="Int64" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -143,6 +148,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
           <NavigationProperty Name="Courses" Relationship="Database.StudentCourse" FromRole="Student" ToRole="Course" />
+          <Property Name="code" Type="Int64" Nullable="false" />
         </EntityType>
         <Association Name="TeacherCourse">
           <End Type="Database.Teacher" Role="Teacher" Multiplicity="1" />
@@ -178,6 +184,7 @@
           <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
           <ScalarProperty Name="CareerId" ColumnName="CareerId" />
           <ScalarProperty Name="exam_time" ColumnName="exam_time" />
+          <ScalarProperty Name="code" ColumnName="code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -186,6 +193,7 @@
         <MappingFragment StoreEntitySet="Teachers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -194,6 +202,7 @@
         <MappingFragment StoreEntitySet="Students">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

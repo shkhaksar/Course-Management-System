@@ -22,6 +22,7 @@ namespace Course_Management.Database
     
         public int Id { get; set; }
         public string name { get; set; }
+        public long code { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
